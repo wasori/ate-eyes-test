@@ -1,0 +1,27 @@
+--- origin/Shinobi-master/libs/fieldBuild.js.rej	1970-01-01 09:00:00.000000000 +0900
++++ update/Shinobi-master/libs/fieldBuild.js.rej	2024-06-17 17:08:20.201002100 +0900
+@@ -0,0 +1,24 @@
++--- /mnt/c/Users/pc/Desktop/origin/Shinobi-master/libs/fieldBuild.js	2024-05-01 01:19:28.000000000 +0900
+++++ /mnt/c/Users/pc/Desktop/update/Shinobi-master/libs/fieldBuild.js	1970-01-01 09:00:00.000000000 +0900
++@@ -1,21 +0,0 @@
++-buildOptions = function(field,possiblities){
++-    if(!field)console.error('field',field)
++-    var fieldElement = ''
++-    possiblities.forEach(function(option){
++-        if(option.optgroup){
++-            fieldElement += '<optgroup label="' + option.name + '">'
++-            fieldElement += buildOptions(field,option.optgroup)
++-            fieldElement += '</optgroup>'
++-        }else{
++-            var selected = ''
++-            if(option.value === field.default){
++-              selected = 'selected'
++-            }
++-            fieldElement += '<option value="' + option.value + '" ' + selected + '>' + option.name + '</option>'
++-        }
++-    })
++-    return fieldElement
++-}
++-module.exports = {
++-    buildOptions: buildOptions
++-}

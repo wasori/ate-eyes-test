@@ -1,0 +1,43 @@
+--- origin/Shinobi-master/conf.json	1970-01-01 09:00:00.000000000 +0900
++++ update/Shinobi-master/conf.json	2024-04-09 13:25:39.210720600 +0900
+@@ -0,0 +1,40 @@
++{
++   "port": 8080,
++   "debugLog": false,
++   "enableFaceManager": false,
++   "videosDir": "__DIR__/videos",
++   "passwordType": "sha256",
++   "detectorMergePamRegionTriggers": true,
++   "wallClockTimestampAsDefault": true,
++   "useBetterP2P": true,
++   "smtpServerOptions": {
++      "allowInsecureAuth": true
++   },
++   "addStorage": [
++      {
++         "name": "second",
++         "path": "__DIR__/videos2"
++      }
++   ],
++   "db": {
++      "host": "localhost",
++      "user": "majesticflame",
++      "password": "",
++      "database": "ccio",
++      "port": 3306
++   },
++   "mail": {
++      "service": "gmail",
++      "auth": {
++         "user": "your_email@gmail.com",
++         "pass": "your_password_or_app_specific_password"
++      }
++   },
++   "cron": {},
++   "pluginKeys": {},
++   "cpuUsageMarker": "CPU",
++   "subscriptionId": "sub_XXXXXXXXXXXX",
++   "thisIsDocker": true,
++   "databaseType": "mysql",
++   "ssl": {}
++}
